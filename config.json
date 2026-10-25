@@ -1,0 +1,21 @@
+{
+  "as_of_exclusive": "2026-10-25",
+  "interval": "1d",
+  "context_points": 100,
+  "train_end_exclusive": "2024-01-01",
+  "validation_end_exclusive": "2025-01-01",
+  "test_end_exclusive": "2026-10-25",
+  "seed": 20261025,
+  "primary_stock": "AAPL",
+  "symbols": {
+    "US": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "JPM", "XOM", "KO", "IBM", "SPY"],
+    "India": ["RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS", "SBIN.NS", "ITC.NS", "LT.NS"],
+    "Global": ["ASML.AS", "SAP.DE", "SHEL.L", "7203.T", "6758.T", "0700.HK", "BHP.AX", "RY.TO"],
+    "FX": ["EURUSD=X", "GBPUSD=X", "JPY=X", "INR=X", "AUDUSD=X", "CAD=X"]
+  },
+  "bin_edges_sigma": [-1.0, -0.25, 0.25, 1.0],
+  "news_lookback_hours": 72,
+  "news_safety_delay_hours": 24,
+  "model_candidates": ["convaiinnovations/laya", "convaiinnovations/laya-multilingual", "vllm-sr/d3-edge"],
+  "parameter_limit": 800000000
+}

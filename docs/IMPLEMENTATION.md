@@ -1,0 +1,17 @@
+# Implementation and verification
+
+`native/scorer.comp` and `native/scorer.cpp` implement float32 Vulkan training of the selected model's original final scorer/readout. The four compute phases are linear logits, softmax-minus-one-hot error, partial weight-gradient reduction, and Adam with L2. Shader dependencies use explicit memory barriers and a fence before host reads. There is no CPU fallback for training.
+
+`results/vulkan_parity.json` records CPU-reference checks on non-tile-aligned dimensions and multiple gradient-reduction chunks. Forward scores, backward gradients and the first Adam update are checked separately, and a nonzero weight change plus the actual RX 560 device name are recorded. This distinguishes training from inference-only GPU offload.
+
+`native/linear.cpp`, `native/linear.comp`, and `scripts/vulkan_linear.py` are adapted from the already-existing adjacent project `/home/abhiram/Documents/ChatGPT/Mistral-Timestral-Experiment/scripts/vulkan_linear.*` and `vulkan_backend.py`. The tiled float32 linear implementation was retained; module selection was generalized while excluding functional MultiheadAttention output projections and the trainable Laya scorer. The original project is not modified. These kernels accelerate frozen feature extraction, not its backward pass.
+
+The upstream Laya/d3 source files are stored locally under `models/` and `vendor/` with pinned Hugging Face revisions. Model-specific sequence rendering and noncausal attention paths are preserved. Laya's original 512-token wrapper limit is extended explicitly to preserve all 100 points and headlines; this is a runtime distribution change and must be considered when reading its base performance. A second construction with a larger token budget checks that nothing was silently truncated. d3 inputs fail rather than truncate overlong inputs.
+
+Representations are read immediately before the existing final scorer. Laya fine-tuning updates its shared 1,024-weight final projection. d3 fine-tuning updates its five relevant original answer-code rows (5×1,024 weights); a block-diagonal feature construction lets the same Vulkan training kernel express that readout exactly. The shared Laya final bias cancels in softmax and remains frozen. All checkpoint parameter counts include the complete retained model, even unused vision parameters.
+
+Original checkpoint temperatures are folded into the initial scorer weights. A separate scalar temperature is fitted on validation after head selection. Saved adapter config documents this convention; `scripts/predict.py` applies it consistently. Full weights are not silently reclassified as newly trained.
+
+`tests/test_integrity.py` checks information cutoffs, exact 100-point sequences, distinct AAPL training sample size, chronological target splits, target reconstruction against source open/close data, news time gates, salience behavior and cost accounting. Final test data are scored only after candidate selection and fine-tuning decisions freeze.
+
+The resumed run uses four CPU threads for Laya after profiling an unchanged validation input. Its features matched the saved representation exactly. A padded shared-memory shader variant was benchmarked and rejected because it did not improve the important matrix shapes; the original validated shader remains in use. See `results/extraction_profile.json` and `results/linear_layout_benchmark.json`.

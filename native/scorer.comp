@@ -1,0 +1,33 @@
+#version 450
+layout(local_size_x=64) in;
+layout(binding=0) buffer X { float x[]; };
+layout(binding=1) buffer Weights { float w[]; };
+layout(binding=2) buffer Logits { float z[]; };
+layout(binding=3) buffer Errors { float e[]; };
+layout(binding=4) buffer Grads { float g[]; };
+layout(binding=5) buffer Labels { uint y[]; };
+layout(binding=6) buffer Moments { float moment[]; };
+layout(push_constant) uniform P { uint n; uint d; uint k; uint stage; uint chunks; uint step; float lr; float l2; } p;
+void main() {
+ uint id=gl_GlobalInvocationID.x;
+ if(p.stage==0) {
+  if(id>=p.n*p.k)return;
+  float v=0.;for(uint j=0;j<p.d;j++)v+=x[id*p.d+j]*w[j];z[id]=v;
+ } else if(p.stage==1) {
+  if(id>=p.n)return;
+  float m=-3.4e38;for(uint c=0;c<p.k;c++)m=max(m,z[id*p.k+c]);
+  float total=0.;for(uint c=0;c<p.k;c++)total+=exp(z[id*p.k+c]-m);
+  for(uint c=0;c<p.k;c++)e[id*p.k+c]=exp(z[id*p.k+c]-m)/total-((y[id]==c)?1.:0.);
+ } else if(p.stage==2) {
+  if(id>=p.d*p.chunks)return;
+  uint j=id%p.d;uint ch=id/p.d;uint end=min(p.n,(ch+1)*128);float value=0.;
+  for(uint i=ch*128;i<end;i++)for(uint c=0;c<p.k;c++)value+=e[i*p.k+c]*x[(i*p.k+c)*p.d+j];
+  g[id]=value/float(p.n);
+ } else if(p.stage==3) {
+  if(id>=p.d)return;float grad=0.;for(uint ch=0;ch<p.chunks;ch++)grad+=g[ch*p.d+id];
+  grad+=p.l2*w[id];
+  float m=.9*moment[id]+.1*grad;float v=.999*moment[p.d+id]+.001*grad*grad;
+  moment[id]=m;moment[p.d+id]=v;
+  w[id]-=p.lr*(m/(1.-pow(.9,float(p.step))))/(sqrt(v/(1.-pow(.999,float(p.step))))+1e-8);
+ }
+}

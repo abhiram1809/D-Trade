@@ -1,0 +1,22 @@
+[
+  {
+    "threads": 2,
+    "elapsed": 6.6148331379999945,
+    "vulkan_linear_seconds": 5.451966492999929,
+    "linear_calls": 119,
+    "tokens": [
+      390
+    ],
+    "max_feature_difference_from_cache": 0.0
+  },
+  {
+    "threads": 4,
+    "elapsed": 6.204803866999953,
+    "vulkan_linear_seconds": 5.366850061999912,
+    "linear_calls": 119,
+    "tokens": [
+      390
+    ],
+    "max_feature_difference_from_cache": 0.0
+  }
+]

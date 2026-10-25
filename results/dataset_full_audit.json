@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "all_examples_checked": 268166,
+  "all_target_symbols_checked": 34,
+  "all_prompt_context_lengths_checked": 268166,
+  "selected_news_records_checked": 24070,
+  "aapl_training_export_records_checked": 10752,
+  "per_symbol_target_reconstruction": [
+    {
+      "symbol": "AAPL",
+      "targets_checked": 11458,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "MSFT",
+      "targets_checked": 10132,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "NVDA",
+      "targets_checked": 6881,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "AMZN",
+      "targets_checked": 7306,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "GOOGL",
+      "targets_checked": 5480,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "META",
+      "targets_checked": 3528,
+      "maximum_return_error": 2.237793284010081e-16
+    },
+    {
+      "symbol": "TSLA",
+      "targets_checked": 4005,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "JPM",
+      "targets_checked": 11646,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "XOM",
+      "targets_checked": 16211,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "KO",
+      "targets_checked": 16211,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "IBM",
+      "targets_checked": 16211,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "SPY",
+      "targets_checked": 8391,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "RELIANCE.NS",
+      "targets_checked": 7629,
+      "maximum_return_error": 2.498001805406602e-16
+    },
+    {
+      "symbol": "TCS.NS",
+      "targets_checked": 5905,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "HDFCBANK.NS",
+      "targets_checked": 7632,
+      "maximum_return_error": 2.498001805406602e-16
+    },
+    {
+      "symbol": "INFY.NS",
+      "targets_checked": 7632,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "ICICIBANK.NS",
+      "targets_checked": 5934,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "SBIN.NS",
+      "targets_checked": 7630,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "ITC.NS",
+      "targets_checked": 7629,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "LT.NS",
+      "targets_checked": 5937,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "ASML.AS",
+      "targets_checked": 7173,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "SAP.DE",
+      "targets_checked": 7203,
+      "maximum_return_error": 2.255140518769849e-16
+    },
+    {
+      "symbol": "SHEL.L",
+      "targets_checked": 7595,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "7203.T",
+      "targets_checked": 6759,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "6758.T",
+      "targets_checked": 6586,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "0700.HK",
+      "targets_checked": 5417,
+      "maximum_return_error": 2.3592239273284576e-16
+    },
+    {
+      "symbol": "BHP.AX",
+      "targets_checked": 9832,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "RY.TO",
+      "targets_checked": 7886,
+      "maximum_return_error": 2.2898349882893854e-16
+    },
+    {
+      "symbol": "EURUSD=X",
+      "targets_checked": 5840,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "GBPUSD=X",
+      "targets_checked": 5852,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "JPY=X",
+      "targets_checked": 7674,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "INR=X",
+      "targets_checked": 5837,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "AUDUSD=X",
+      "targets_checked": 5216,
+      "maximum_return_error": 0.0
+    },
+    {
+      "symbol": "CAD=X",
+      "targets_checked": 5908,
+      "maximum_return_error": 0.0
+    }
+  ],
+  "dataset_sha256": "1033c942a1b3ebc240315b15cc988cf7c5c55a6a4759081fe5d591f2d765386a",
+  "seconds": 11.325598001480103,
+  "completed_unix": 1792906499.2587593
+}

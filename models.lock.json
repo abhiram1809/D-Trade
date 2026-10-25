@@ -1,0 +1,10 @@
+{
+  "convaiinnovations/laya": {
+    "sha": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+    "safetensors_total": 421293830
+  },
+  "vllm-sr/d3-edge": {
+    "sha": "c454ee39b862248d70abd7f84195d2f54ffe6d43",
+    "safetensors_total": 594321600
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "winner": "d3-edge",
+  "selection_metric": "five-bin log loss on predetermined 2024 validation origins",
+  "comparisons": [
+    {
+      "n": 408,
+      "five_bin_accuracy": 0.20588235294117646,
+      "five_bin_macro_f1": 0.1090608717753209,
+      "three_class_accuracy": 0.31862745098039214,
+      "three_class_macro_f1": 0.161090458488228,
+      "log_loss": 1.6890852209594203,
+      "brier": 0.8357251141751746,
+      "ece": 0.09190649917150912,
+      "actual_central_interval_coverage": 0.8480392156862745,
+      "predicted_central_interval_mass": 0.5851479726368818,
+      "nonflat_n": 250,
+      "nonflat_directional_accuracy": 0.52,
+      "nonflat_binary_log_loss": 0.7361685392230725,
+      "nonflat_binary_brier": 0.27012310696130254,
+      "model": "laya",
+      "parameters": 421293827
+    },
+    {
+      "n": 408,
+      "five_bin_accuracy": 0.3872549019607843,
+      "five_bin_macro_f1": 0.111660777385159,
+      "three_class_accuracy": 0.3333333333333333,
+      "three_class_macro_f1": 0.25461560481328344,
+      "log_loss": 1.5022945631339126,
+      "brier": 0.7510107538574191,
+      "ece": 0.06136601388172338,
+      "actual_central_interval_coverage": 0.8480392156862745,
+      "predicted_central_interval_mass": 0.6998767070797708,
+      "nonflat_n": 250,
+      "nonflat_directional_accuracy": 0.52,
+      "nonflat_binary_log_loss": 0.7093329789073923,
+      "nonflat_binary_brier": 0.25774753608608164,
+      "model": "d3-edge",
+      "parameters": 594582720
+    }
+  ],
+  "test_not_used": true,
+  "selected_unix": 1792910908.142419
+}

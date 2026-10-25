@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+models/
+vendor/
+*.so
+*.spv
+results/cache/
+
+# Local credentials and private keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Machine-local runtime state and growing logs
+results/*.log
+results/*.lock
+results/*feature_progress.json
+results/run_status.json
+results/runner_process.json
+results/latest_verified_cache_counts.json

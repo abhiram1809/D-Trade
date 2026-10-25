@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "limit": 800000000,
+  "method": "Product of every tensor shape in the actual downloaded safetensors headers; unused vision tensors included. Runtime upper bound also allows retaining the old readout plus an adapter vector and scalar temperature.",
+  "models": {
+    "laya": {
+      "files": [
+        {
+          "file": "models/laya/model.safetensors",
+          "stored_elements": 421293830,
+          "tensors": 206
+        }
+      ],
+      "all_stored_parameter_or_buffer_elements": 421293830,
+      "reported_trainable_and_frozen_parameters": 421293827,
+      "adapter_vector_elements": 1024,
+      "conservative_runtime_element_upper_bound_including_retained_original_readout_and_extra_temperature": 421294855,
+      "under_800M": true
+    },
+    "d3-edge": {
+      "files": [
+        {
+          "file": "models/d3-edge/model-00001-of-00001.safetensors",
+          "stored_elements": 594321600,
+          "tensors": 305
+        },
+        {
+          "file": "models/d3-edge/readout.safetensors",
+          "stored_elements": 261120,
+          "tensors": 1
+        }
+      ],
+      "all_stored_parameter_or_buffer_elements": 594582720,
+      "reported_trainable_and_frozen_parameters": 594582720,
+      "adapter_vector_elements": 5120,
+      "conservative_runtime_element_upper_bound_including_retained_original_readout_and_extra_temperature": 594587841,
+      "under_800M": true
+    }
+  },
+  "checked_unix": 1792908353.9122157
+}

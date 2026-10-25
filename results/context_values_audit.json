@@ -1,0 +1,216 @@
+{
+  "passed": true,
+  "windows_checked": 268166,
+  "ohlcv_values_checked": 134083000,
+  "return_values_checked": 26816600,
+  "prompt_return_values_checked": 26816600,
+  "per_symbol": [
+    {
+      "symbol": "AAPL",
+      "windows": 11458,
+      "ohlcv_values": 5729000,
+      "return_values": 1145800
+    },
+    {
+      "symbol": "MSFT",
+      "windows": 10132,
+      "ohlcv_values": 5066000,
+      "return_values": 1013200
+    },
+    {
+      "symbol": "NVDA",
+      "windows": 6881,
+      "ohlcv_values": 3440500,
+      "return_values": 688100
+    },
+    {
+      "symbol": "AMZN",
+      "windows": 7306,
+      "ohlcv_values": 3653000,
+      "return_values": 730600
+    },
+    {
+      "symbol": "GOOGL",
+      "windows": 5480,
+      "ohlcv_values": 2740000,
+      "return_values": 548000
+    },
+    {
+      "symbol": "META",
+      "windows": 3528,
+      "ohlcv_values": 1764000,
+      "return_values": 352800
+    },
+    {
+      "symbol": "TSLA",
+      "windows": 4005,
+      "ohlcv_values": 2002500,
+      "return_values": 400500
+    },
+    {
+      "symbol": "JPM",
+      "windows": 11646,
+      "ohlcv_values": 5823000,
+      "return_values": 1164600
+    },
+    {
+      "symbol": "XOM",
+      "windows": 16211,
+      "ohlcv_values": 8105500,
+      "return_values": 1621100
+    },
+    {
+      "symbol": "KO",
+      "windows": 16211,
+      "ohlcv_values": 8105500,
+      "return_values": 1621100
+    },
+    {
+      "symbol": "IBM",
+      "windows": 16211,
+      "ohlcv_values": 8105500,
+      "return_values": 1621100
+    },
+    {
+      "symbol": "SPY",
+      "windows": 8391,
+      "ohlcv_values": 4195500,
+      "return_values": 839100
+    },
+    {
+      "symbol": "RELIANCE.NS",
+      "windows": 7629,
+      "ohlcv_values": 3814500,
+      "return_values": 762900
+    },
+    {
+      "symbol": "TCS.NS",
+      "windows": 5905,
+      "ohlcv_values": 2952500,
+      "return_values": 590500
+    },
+    {
+      "symbol": "HDFCBANK.NS",
+      "windows": 7632,
+      "ohlcv_values": 3816000,
+      "return_values": 763200
+    },
+    {
+      "symbol": "INFY.NS",
+      "windows": 7632,
+      "ohlcv_values": 3816000,
+      "return_values": 763200
+    },
+    {
+      "symbol": "ICICIBANK.NS",
+      "windows": 5934,
+      "ohlcv_values": 2967000,
+      "return_values": 593400
+    },
+    {
+      "symbol": "SBIN.NS",
+      "windows": 7630,
+      "ohlcv_values": 3815000,
+      "return_values": 763000
+    },
+    {
+      "symbol": "ITC.NS",
+      "windows": 7629,
+      "ohlcv_values": 3814500,
+      "return_values": 762900
+    },
+    {
+      "symbol": "LT.NS",
+      "windows": 5937,
+      "ohlcv_values": 2968500,
+      "return_values": 593700
+    },
+    {
+      "symbol": "ASML.AS",
+      "windows": 7173,
+      "ohlcv_values": 3586500,
+      "return_values": 717300
+    },
+    {
+      "symbol": "SAP.DE",
+      "windows": 7203,
+      "ohlcv_values": 3601500,
+      "return_values": 720300
+    },
+    {
+      "symbol": "SHEL.L",
+      "windows": 7595,
+      "ohlcv_values": 3797500,
+      "return_values": 759500
+    },
+    {
+      "symbol": "7203.T",
+      "windows": 6759,
+      "ohlcv_values": 3379500,
+      "return_values": 675900
+    },
+    {
+      "symbol": "6758.T",
+      "windows": 6586,
+      "ohlcv_values": 3293000,
+      "return_values": 658600
+    },
+    {
+      "symbol": "0700.HK",
+      "windows": 5417,
+      "ohlcv_values": 2708500,
+      "return_values": 541700
+    },
+    {
+      "symbol": "BHP.AX",
+      "windows": 9832,
+      "ohlcv_values": 4916000,
+      "return_values": 983200
+    },
+    {
+      "symbol": "RY.TO",
+      "windows": 7886,
+      "ohlcv_values": 3943000,
+      "return_values": 788600
+    },
+    {
+      "symbol": "EURUSD=X",
+      "windows": 5840,
+      "ohlcv_values": 2920000,
+      "return_values": 584000
+    },
+    {
+      "symbol": "GBPUSD=X",
+      "windows": 5852,
+      "ohlcv_values": 2926000,
+      "return_values": 585200
+    },
+    {
+      "symbol": "JPY=X",
+      "windows": 7674,
+      "ohlcv_values": 3837000,
+      "return_values": 767400
+    },
+    {
+      "symbol": "INR=X",
+      "windows": 5837,
+      "ohlcv_values": 2918500,
+      "return_values": 583700
+    },
+    {
+      "symbol": "AUDUSD=X",
+      "windows": 5216,
+      "ohlcv_values": 2608000,
+      "return_values": 521600
+    },
+    {
+      "symbol": "CAD=X",
+      "windows": 5908,
+      "ohlcv_values": 2954000,
+      "return_values": 590800
+    }
+  ],
+  "dataset_sha256": "1033c942a1b3ebc240315b15cc988cf7c5c55a6a4759081fe5d591f2d765386a",
+  "seconds": 19.171475648880005,
+  "completed_unix": 1792907316.458117
+}
