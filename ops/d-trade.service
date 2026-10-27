@@ -1,0 +1,17 @@
+[Unit]
+Description=D-Trade resumable Vulkan market experiment
+StartLimitIntervalSec=3600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Documents/ChatGPT/D-Trade
+ExecStart=%h/Documents/ChatGPT/D-Trade/.venv/bin/python scripts/run_pipeline.py
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=30
+KillMode=control-group
+
+[Install]
+WantedBy=default.target

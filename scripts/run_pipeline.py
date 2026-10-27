@@ -29,6 +29,19 @@ def run(phase,args):
 
 
 def main():
+    # An enabled user service must not retrain an already completed experiment
+    # after a later login. A changed dataset invalidates this completion marker.
+    summary_path=ROOT/'results/summary.json'
+    report_path=ROOT/'results/REPORT.md'
+    if STATUS.exists() and summary_path.exists() and report_path.exists():
+        previous=json.loads(STATUS.read_text())
+        if previous.get('state')=='complete':
+            import hashlib
+            summary=json.loads(summary_path.read_text())
+            digest=hashlib.sha256((ROOT/'data/processed/examples.parquet').read_bytes()).hexdigest()
+            if summary['checkpoint']['dataset_sha256']==digest:
+                print('Existing completed experiment matches dataset; no restart needed',flush=True)
+                return
     # A separate authorized preparation process is already running. Do not race it.
     status('await_prepared_dataset')
     while not (ROOT/'data/processed/manifest.json').exists():time.sleep(3)

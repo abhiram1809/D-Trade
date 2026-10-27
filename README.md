@@ -23,6 +23,8 @@ The backbone stays frozen. Native Vulkan computes the final scorer/readout forwa
 
 The RX 560 is old enough that feature extraction is a long-running stage. Per-example representations are cached atomically. Rerunning the worker resumes completed representations, and a process lock prevents duplicate GPU workers.
 
+For this checkout at `~/Documents/ChatGPT/D-Trade`, `ops/d-trade.service` runs the pipeline as a user service. Install it under `~/.config/systemd/user/`, run `systemctl --user daemon-reload`, then `systemctl --user enable --now d-trade.service`. It resumes after the user logs in and retries process failures up to three times per hour. Stop an existing manually launched worker before starting the service; its GPU lock prevents concurrent runners. Inspect it with `systemctl --user status d-trade.service` and `journalctl --user -u d-trade.service`. A completed experiment with a matching dataset is not retrained on subsequent logins. Adapt the two paths in the unit for another checkout location.
+
 ## Reproduce
 
 Python 3.14 and a working Vulkan driver were used on this host. Exact Python versions are in `requirements.lock.txt`; install the CPU PyTorch wheel separately using its official index when creating a fresh environment.

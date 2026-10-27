@@ -1,5 +1,11 @@
 # Active goal handoff — 25 October 2026
 
+## Recovery on 27 October
+
+The machine booted at 01:36 IST on 26 October, within a minute of the previous worker's final progress entry. It stopped at 6,167 / 10,752 AAPL training representations and 6,815 / 12,646 total representations. The log had no recorded exception. A resumed runner on 27 October passed all 11 integrity tests, reused validation caches, selected the same d3-edge candidate, and continued from the saved inputs. Its initial throughput after restart is slower than the earlier run; use fresh progress rather than the previous ETA.
+
+`ops/d-trade.service` provides a user service for this checkout. Its installed service resumes after login and restarts failed processes, with a limit of three starts per hour. Use `systemctl --user status d-trade.service` and live `results/run_status.json` PIDs to check it. An unchanged completed dataset is not trained again on a later login. The actual Vulkan fine-tuning and newer-period test are still pending at this milestone.
+
 The requested experiment is **not complete**. Do not mark the goal complete from the existence of code, manifests, parity tests, or a running worker. Actual base results, selected-model fine-tuning on >=10,000 stock examples, and newer-period evaluation still need to finish and be audited.
 
 ## Authoritative current work
