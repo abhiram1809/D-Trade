@@ -1,0 +1,15 @@
+{
+  "regenerated_indices": [
+    6162,
+    6163,
+    6164,
+    6165,
+    6166
+  ],
+  "regenerated_count": 5,
+  "all_regenerated_entries_valid": true,
+  "verification": "NPZ loads, finite 1024-vector, positive token count and exact source example identity",
+  "verified_unix": 1793090733.3839154,
+  "before_recovery_audit": "cache_resume_audit.json",
+  "quarantine_record": "reboot_cache_recovery.json"
+}
