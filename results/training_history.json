@@ -1,0 +1,1202 @@
+[
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 1,
+    "validation_log_loss": 1.4874695301847363,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b6f622be7e8abb8970dee3e43589842caa1b7d0a86eec5c127da6c463cda5458"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 2,
+    "validation_log_loss": 1.4912326359975934,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "25de15d520d77cd1bf23286338addb89a08125cf8da6a5138b2558602ac9dd51"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 3,
+    "validation_log_loss": 1.4926041775366656,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "feee45a4aae00e087b56fe0d3365f30b52c1db03684e73afaf87298a827399e8"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 4,
+    "validation_log_loss": 1.484454041925928,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "e7225e8599dddf788e68bf7d0a16df9cdf062addffa72372ef11adca01e8b7d0"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 5,
+    "validation_log_loss": 1.4981611199247222,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "8c0c41d24d0662323633aca4fccc5ad5adbc053e06c89788037cc995dd68027a"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 6,
+    "validation_log_loss": 1.4842083783095226,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "5820c7770423d65a133b7ab84c5281b80bab6dd913f87d5f5de7ebda60ebfa46"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 7,
+    "validation_log_loss": 1.5049412092174546,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "469dc3c5c2d408d8bda191239d157b7b2af3ff3d3033ce8f9d938a37d934a952"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 8,
+    "validation_log_loss": 1.4866605348876358,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "60012a2b7d18782a1986098467d02259679567e35661b13bc6fc84792f06b7b4"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 9,
+    "validation_log_loss": 1.4899825315187007,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b7494fd9a579de1d8a042ccecd56ccfb7376eb8e648598042fc0c8d4c2b4a4e7"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 10,
+    "validation_log_loss": 1.4917375865378406,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "7250a4b459f484285eaca5e1f56df62d0f6a81d38a67929c140840bc2d0af18c"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 11,
+    "validation_log_loss": 1.4854379603293104,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b550dbfa930867d56189ad977f8f40448ebb6e1895edb4406e82607729871784"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 12,
+    "validation_log_loss": 1.483081546490121,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "17f263e639ea99735d46bc89b6d7292ab016a61bd2c7732ab92fee419b5c29df"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 13,
+    "validation_log_loss": 1.4899950970261797,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "5ab10f6cfdf99a68c6d1c96b2650466d91dc4c8f7ee039bd1e77f973425dc1ef"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 14,
+    "validation_log_loss": 1.4935521586848894,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "35fe7f6b02cbc08a068fe5a81f7e86725e8a91cfdd11383bc662f0ca6736f6b7"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 15,
+    "validation_log_loss": 1.4911196979675219,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "eb26ee63bc4c217a392a3b76268cb40c0fbd8722597fc3e96547c7c20ce1ddc1"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 16,
+    "validation_log_loss": 1.4756538472422571,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0d3f816d8e4d9834f09bca0d91fab25eb79d164cf048d9a20ede25e8cc90d80b"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 17,
+    "validation_log_loss": 1.4901289386709577,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a7026de6c217027e1f5467ee56689724f7b8dcb985472acbb8732d8b35951e91"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 18,
+    "validation_log_loss": 1.4795459307689471,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "32069d85689eaad3a810cb1bb12c6a7baf4ad36caf367cf2cb9636244709e16f"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 19,
+    "validation_log_loss": 1.4809596545411234,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "ff4ffac80478a385e509dacb13bc460d12950f471173632532a3143f26fa40fd"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.0,
+    "epoch": 20,
+    "validation_log_loss": 1.4831218012560992,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "9da64c9bab558016379875f555fb0d07228cb0c36a45dbe2f9194b03538caf00"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 1,
+    "validation_log_loss": 1.4893647091698985,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "41826c44ed83ed117a42dbb1573eb1f8458a0e8d007fa7af0b3583ee76bdbf7a"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 2,
+    "validation_log_loss": 1.4866366221966891,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "52267c60688303dcaa5a8be73165ecdff4149dacbb2ca1298b17db132de4e66c"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 3,
+    "validation_log_loss": 1.4948505104755678,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "635e9447261b1ad3d66c298c9301493298f01cb72251ed7c95b78b52498cdb7c"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 4,
+    "validation_log_loss": 1.4808973993939463,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "ffc025f1c3220a3ec3019d649c02c2c4cbfe2fbc51c5e99f1c73090c88805e36"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 5,
+    "validation_log_loss": 1.4863932185215927,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b6133136d00b04a6e9967a8934651e801f330013b8ebf32cda03e5085673b75c"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 6,
+    "validation_log_loss": 1.4926130870726333,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "379042daaac2e11bb7a6b19b447a85c4f254b9b509321a0623ce861eadfa699b"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 7,
+    "validation_log_loss": 1.4872893399068747,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "9afb99edd788617c31d50aac03c8818c06a0c982607dc695f719a65a4919229f"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 8,
+    "validation_log_loss": 1.480558086840525,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0615cf83a0609f6d19bed9bfe2893b83184fccbb30c845bc2e35d1dd9d5405d2"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 9,
+    "validation_log_loss": 1.48603163255979,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "ba99a853fd4faa4ac25f30259e9a3ed268f68e54de3bb32d0c4e0bce0715e37c"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 10,
+    "validation_log_loss": 1.4826338443149547,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "6dc18e224946ef30a864468ee3bda4b0b17cb4e9f14de1c1f8f2813cf6aaca81"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 11,
+    "validation_log_loss": 1.4815303118074732,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d28ae96676586bbbdae6662249b87f7e0938f7ff6886615ac398d41e17bbb88b"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 12,
+    "validation_log_loss": 1.4897444843983192,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "581cd8280adceae8ad590de90fe9829e61a8f3df49c65e57f0fd7419bcb62c5a"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 13,
+    "validation_log_loss": 1.488119374251015,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "cdc59e0188f743c86611a20dab4fab1ee6d1b95131b57b094f15c01e59d815ce"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 14,
+    "validation_log_loss": 1.475619010421849,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0bc6bc41f0aa1ef7b838821d0c95390773b95a55f50d7e125d948ea17ea5d60e"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 15,
+    "validation_log_loss": 1.47950300514555,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "754b342a112bf1fd97228e84350ecd96b3f7ab8fc22be038034d20a92708a907"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 16,
+    "validation_log_loss": 1.4854922705342224,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "f09f77a26d2ea29e16a4aab7a8640a19e357b3464caa7879a5ddd6dbe3fc51b5"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 17,
+    "validation_log_loss": 1.479155912150032,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "acfd89f1aa6144f8fd6d20088a376f5adcc479b66a96a95708bf8354d722ed73"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 18,
+    "validation_log_loss": 1.4990034331854445,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "4e800b31449be9b47c4f29e4a134a53ea1b4682ec7287b015873660588bb6bf3"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 19,
+    "validation_log_loss": 1.48540093706575,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0579a747a5c1a787e13ad9da6daab7f629503ab0004bc9b616fec28d408074e0"
+  },
+  {
+    "lr": 0.0001,
+    "l2": 0.01,
+    "epoch": 20,
+    "validation_log_loss": 1.484861399514539,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "4450ca5379aaf6a09721e7bfca3c8192f9ececc7beefa71e86420842b05c46cb"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 1,
+    "validation_log_loss": 1.4974828431786775,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d1f144062adb76cbd87813598918c4f5a558ba0e6415deec2ee170435190e305"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 2,
+    "validation_log_loss": 1.5007065827461772,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0cfa05e26793e1d5a871741039937beddd65226a24bd7dd7433ae6ccaf75f092"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 3,
+    "validation_log_loss": 1.4934639774231369,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "54a692f287ef2ea3a205c7d5196256c88def0c9f2dc73c751967d042bc1b8d38"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 4,
+    "validation_log_loss": 1.4804125691106709,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "c1c0cb08226950dfdee38e093f2892d9f092f5fb5a414632abf36cea20b75df7"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 5,
+    "validation_log_loss": 1.4731263338185614,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d383d915e29330f2f56a49f9d175b25baf575e99e6bddce2f0cb5773615fb222"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 6,
+    "validation_log_loss": 1.4910680668373166,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "80e56312d123086d553ccda5e29151c0363f0cf6854297ec6826906d82450a3a"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 7,
+    "validation_log_loss": 1.4968856128953838,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "437757ac951aa74f6b11852b0209aabd0e7e47c1ab080229c34e505fa04a33bf"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 8,
+    "validation_log_loss": 1.4843278882423534,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b0ddd1c152c58ed74d1a7a426bde3347fb8bbd9c7f41138b25e5a5aa4287b297"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 9,
+    "validation_log_loss": 1.4898045578024424,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "f20a3f8a1fc87a984e63fa0139278d0a5b6ff43a63d073f3b9cc511004acb001"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 10,
+    "validation_log_loss": 1.4771916889823251,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "f885dec33b791f4bec795b07b4d1f29517f5d4f3fe1b7efc6fcd05a2655b643a"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 11,
+    "validation_log_loss": 1.4904277110960353,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "3489263eade5e20e35df92e1c52e63135637480375726d0329d54a3784020fef"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 12,
+    "validation_log_loss": 1.4803956336815933,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "78f9d0c517fe396b3c80e6d462e195e4c59d76961b402517fa054c45911385a5"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 13,
+    "validation_log_loss": 1.4771791016665587,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "68c83994b995bf955b834510ad4c50d820328e0919ccf968277e6e1c59da7a14"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 14,
+    "validation_log_loss": 1.487035224725153,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a74513906e00c51954b6aa9722d865fa0ac8db5d83a1753293504d39a07c8b06"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 15,
+    "validation_log_loss": 1.4796954625325778,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "bafe8403f18cbec87261f87e157e75a6b082c57744857e4e2c16a502493b6474"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 16,
+    "validation_log_loss": 1.533615412022995,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "3bf1e7e5bd3d638e2cfb4510ef2d236695738ee62b5e00845fff7796c584d7f8"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 17,
+    "validation_log_loss": 1.486974204070769,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b9de75206571b101b7f8dd5d6ac1bd5bede0e6752136bce0c1b568d9178797b8"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 18,
+    "validation_log_loss": 1.4888525616199868,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d46e2ed84f7a1a21857f2328e1405af3dd9ddedd945539607ebd8f23fac48604"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 19,
+    "validation_log_loss": 1.4796715116608068,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "c7d7c389258142f2d6dfe1efb7933eccf1d877b1c4550158da3dff551fd8f2f3"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.0,
+    "epoch": 20,
+    "validation_log_loss": 1.4864814268887572,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d9df8c25336524e6ecdb1c1bfe8b1e2e4ee5e31ceaf625ef3adf42d7ce1e05d7"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 1,
+    "validation_log_loss": 1.5154533528371175,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a34f2579a9603925d93a4886421081d64a48c5db92a67614c39ec71e6fda17db"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 2,
+    "validation_log_loss": 1.4919208041879288,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "bbe22802148c23ae63d9e5f40b5d56bba9c7b81ff83a3b0dd5745e70e60b4814"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 3,
+    "validation_log_loss": 1.4910726789740356,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "e3910ab008e89f20cfc1aa3993de6cc6e857f03a3d36b81d3b1088e29d8ca706"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 4,
+    "validation_log_loss": 1.4808682002503593,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "5a79d40b5bf6ac0aa8b2d072462b83aee09be0759835ff199f35130034e44092"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 5,
+    "validation_log_loss": 1.5159998707167508,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d8ad74b116471d1bd6a9546ebdea3cefb79e3e324254971b9236a9a91ba608ec"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 6,
+    "validation_log_loss": 1.4748553199604206,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "60d7e1e7be27188e948a0ebe14d42d30f969f181fc4112278e9fdd8770a8ef54"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 7,
+    "validation_log_loss": 1.4898743079171675,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "36168b749990ea45f46eb5889b3b8e0b8858c1fd94e3c02dbde8dc7d020c4202"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 8,
+    "validation_log_loss": 1.4775221155082616,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "8f8f87b31446809763c30a7d034d91a5fdcfcc6796c40e11af3b0b9f894882c1"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 9,
+    "validation_log_loss": 1.4730725868485166,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "febccebb9722ae14a37f564909c40191022d5f625297101fcc746840b24c4daf"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 10,
+    "validation_log_loss": 1.479549894603599,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0747c79a770f4fcbc843c1779a98af893dfe28b4b1b616480775bcd131ed287a"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 11,
+    "validation_log_loss": 1.480823388446635,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "9b94cd6a16a23126a88f3a90b2b9c1dad8926cefe446b0519cf5d51fbc47dd4b"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 12,
+    "validation_log_loss": 1.4712351379475932,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "da4248f056a7c836794b358b9ab999c9cab077008bcff74c9c95ec057f57331d"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 13,
+    "validation_log_loss": 1.496976201634324,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "bf0db1fb7daf4857fe3e8b36be9e4b0938264af7106298504b5462ad3e469ebb"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 14,
+    "validation_log_loss": 1.4803554279944056,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "39cc338742071cec5d52bac2f6bb734be9528a4ac3d39e3f6da337afb574793f"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 15,
+    "validation_log_loss": 1.4880862955415222,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a74794011829023b3a3ca7ada8f3e3eec76b3b2cf279206ca54f1a40b23a1db5"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 16,
+    "validation_log_loss": 1.496884576355354,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "59e1785742f63e8206b2823cbd3e8251be3d8199f5849fbb0e9c0b23ff253949"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 17,
+    "validation_log_loss": 1.4800954349397724,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "3c2691a94c0bbe7d8b31c5f3dc424cfd030fee83b0a5cbc5cac4f6cf181048fb"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 18,
+    "validation_log_loss": 1.4988529719536177,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a7a75e8a08aaacace4303a90d9b8b2fe214a87ac55497e1fbede05146c754cc1"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 19,
+    "validation_log_loss": 1.480687848629078,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "cfe2c39c664840eb1a58b258800da0da7dc6cf83f447a303d5c30305b467c737"
+  },
+  {
+    "lr": 0.0003,
+    "l2": 0.01,
+    "epoch": 20,
+    "validation_log_loss": 1.4946350023785944,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "4bd9cb31053033f96a6fd3474ee8bd8feb2f28ab2381a34eb56cbfa1b234db1c"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 1,
+    "validation_log_loss": 1.4913564193081803,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "e8a5d2759e051d4c1a08cd1849f9731b5f368dfeb34b55c9589d3a44046a3511"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 2,
+    "validation_log_loss": 1.494494863594296,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "46e8024387910afa1a0ed64297f8570f9faa288716b4b4fb3c4e5c6796faf5fb"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 3,
+    "validation_log_loss": 1.4965453348740463,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b98a80b698c0f34ded7506f8544d2b94dfe0b1fea216fabdbc9ce5f4e04b92c5"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 4,
+    "validation_log_loss": 1.480671974022376,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a335b0699aad47b5ce46d5aeec94f7d7f34eb5ab174e1dfd84a76edd17f56c5f"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 5,
+    "validation_log_loss": 1.4978468900611508,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "52d855c55f16622613652519a580793f0eabd82612db046bdbbac5934fc488ec"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 6,
+    "validation_log_loss": 1.511305922932682,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "912087c6cdd5e57cdccb8e0d10bf7178bccc21c74c443038d863e8bc5eb7de09"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 7,
+    "validation_log_loss": 1.5116147243143223,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "1134ac5cc3ed2bede2b967b3f3df0357dc8709c017c2d798a86dcf2cd0779f3b"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 8,
+    "validation_log_loss": 1.5257354779779515,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "1418457c5ce97e37b7bace866ffe20002e6f9f16f2483c9b3ab07b5a7deb509c"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 9,
+    "validation_log_loss": 1.4808288733668182,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "46434c0cb64a8057c185bb409e72b8513873fcf6287ffa17f3094479366cc17e"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 10,
+    "validation_log_loss": 1.4977511703476103,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "e3dfbadfff4a77042b21812a6835add94846e6c3a2e1b07de5b5ae82dc5f1660"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 11,
+    "validation_log_loss": 1.5094294657160963,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0bd236acced1b0b2dc8acd4d1f438b1d207063cda8f63d7ca165d8711e95727c"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 12,
+    "validation_log_loss": 1.4956965706219925,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "83fbb48cd711643349b7cf52678d84711844a1190ac37bd5f0d7955d175508d2"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 13,
+    "validation_log_loss": 1.4850063486658107,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "c93fff4994788ec3972e20959f3c081e810f587e153b5d9a32f9df59f6c15c04"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 14,
+    "validation_log_loss": 1.4874035227330864,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "b79ebdd24074600b99b92ecb63b18d65cfe3fbdbfe81411e899de32c105c0aa5"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 15,
+    "validation_log_loss": 1.53131681660091,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "11084e4cbb6c36da36e21f45b001f37ed71702531c49c206d9e8bd4da4c720bf"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 16,
+    "validation_log_loss": 1.5332327457816237,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "c8e561c93c8be6afe519b0b3ad506fcac8850c0088cfe716d329cc7a0d838a16"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 17,
+    "validation_log_loss": 1.4751220149707556,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "c822141e2ebb84a03cc7d0aac085c49a93b51c3412a034fcf93471e58839f496"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 18,
+    "validation_log_loss": 1.4953821339583766,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "4cdaf2348feff65756bdcb06575e1dc9a3ac0e575a6167697ad3b32fa2ee2352"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 19,
+    "validation_log_loss": 1.4849793551247858,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "d09ab235f3d15c9c41f58105b406187031e9610fe76044d9ec6d97d5be1ad93b"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.0,
+    "epoch": 20,
+    "validation_log_loss": 1.515050375544107,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "44c3bd7d54d67e915d902e538504192772cac25a059af7bb11dd3038e9f78c75"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 1,
+    "validation_log_loss": 1.5547364238015025,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "cf685affbc73c76c7ee5a7280e3ed3509fae668c11621c3d139edd1c7768d2a9"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 2,
+    "validation_log_loss": 1.5063952504602,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "04d6147a125f3ec3e629901b46cdff8b5a448a636372da76cb4ebe0d4be5cc7e"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 3,
+    "validation_log_loss": 1.5258146282019687,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "5774c81edcb5508f9167bdb43f817433cd76e67d9dbe687d8b4e062720302050"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 4,
+    "validation_log_loss": 1.5338313632202205,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "534af8fad896d88627c296ab3b933c954109ce501ed2116a974f09d3eeec4182"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 5,
+    "validation_log_loss": 1.4904876313517639,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "f6aaeac1cc5de1e5504be4810b1ca693becb224665aab133c80bda86b7753c1a"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 6,
+    "validation_log_loss": 1.5025525783053486,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "2d924070550c574b3b31550eb86ac2bedfd8198819fb747cba08985550c6a71c"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 7,
+    "validation_log_loss": 1.5134032829716062,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "674a955ce24e1a8062270895c33cbc2ab23ae27eff29324bb9fe32b640adaa28"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 8,
+    "validation_log_loss": 1.509251008656303,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "0ed081538a8843823a199e60dc4a228a421f6c21e8347cbfe75d995508b57002"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 9,
+    "validation_log_loss": 1.486950558690826,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "06ee6c2a9399dbf0e0c5bfaab77cadeb05652b5ca07d4ee9cd4fbf0fd78f0bea"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 10,
+    "validation_log_loss": 1.4879720718949268,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "9ad0e630f223477dedf2749b3dd2e6d14cfdae033ea2dafed02cabc3f7700c12"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 11,
+    "validation_log_loss": 1.5118273401028977,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "3b797884e994689936ca95e8d089400f3bda910e3bf53d1953e5bae1e746e41b"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 12,
+    "validation_log_loss": 1.4908744527710245,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "2e2a2595b0f8dbc4cf66359e3bbea25a60ffbff1b8be86faee63dff4f6f88a82"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 13,
+    "validation_log_loss": 1.4887791540489252,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "781e717f8c6b6fb4b87ea3723db549bed4f70145e2f085c4d63b12a6640e24ba"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 14,
+    "validation_log_loss": 1.484758305912072,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "3876a5a6455c0f4249e36373b22a95ca539d9f1c01fc936ce0015c672b1b7889"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 15,
+    "validation_log_loss": 1.4962979211697225,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "bbb2416adebd665fada74d88b508a3f8d761798fe6adba85d5d4a478aaaa74d4"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 16,
+    "validation_log_loss": 1.504718531531197,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "a78a9ae6bc3ec9e3ef025eb73c09e7b20948169c648a87fc58d06cb5524d3900"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 17,
+    "validation_log_loss": 1.5017079249751482,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "01ef0fb239de4278dd01b757b432ce0a1474e75e6ed23247592bfc87ff2f3a98"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 18,
+    "validation_log_loss": 1.4950662650067068,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "73b7aed9c47eb3943dd78a27b48c4bac3bb0e87b9be7378cc7a7c165ba2a25bb"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 19,
+    "validation_log_loss": 1.4786254129377798,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "38b0637923cf7fed5dba56b03e4ad0bff64784ad18d2417caa22f278dc71c91c"
+  },
+  {
+    "lr": 0.001,
+    "l2": 0.01,
+    "epoch": 20,
+    "validation_log_loss": 1.4870757638621404,
+    "examples_seen": 10752,
+    "unique_examples_seen": 10752,
+    "successful_gpu_updates": 84,
+    "sample_order_sha256": "25f0fe4fcffae0e332680af126956b95be69447439ed0f3a6bd710c6b6db72e3"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "all": {
+    "n": 1246,
+    "always_up_three_class_accuracy": 0.33547351524879615,
+    "trailing_20_point_momentum_three_class_accuracy": 0.3162118780096308,
+    "note": "Hard directional rules have no forecast probability distribution; proper probabilistic scores are not fabricated."
+  },
+  "AAPL": {
+    "n": 454,
+    "always_up_three_class_accuracy": 0.3788546255506608,
+    "trailing_20_point_momentum_three_class_accuracy": 0.34140969162995594,
+    "note": "Hard directional rules have no forecast probability distribution; proper probabilistic scores are not fabricated."
+  }
+}

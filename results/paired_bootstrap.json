@@ -1,0 +1,10 @@
+{
+  "mean_log_loss_difference_a_minus_b": 0.008011267016055024,
+  "ci95": [
+    -0.014124373765948425,
+    0.03097177515864153
+  ],
+  "repetitions": 1000,
+  "block_observations_per_symbol": 20,
+  "note": "For subsampled symbols these are 20 observed origins, not 20 consecutive market sessions; primary AAPL is continuous."
+}

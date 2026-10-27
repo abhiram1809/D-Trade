@@ -1,4 +1,10 @@
-# Active goal handoff — 25 October 2026
+# Completed experiment — 27 October 2026
+
+The experiment is **complete and independently audited**. All 12,646 selected-model representations were checked. Vulkan fine-tuning used 10,752 distinct AAPL examples and 5,120 original readout weights; the selected checkpoint's 1,008 GPU updates were replayed independently with bitwise-identical weights. All 160 test metric rows were recomputed across 1,246 newer-period origins, including 454 continuous AAPL sessions. A fresh saved-adapter prediction matched its stored held-out probabilities within 0.0000004. The three result figures were visually reviewed. See `results/completed_run_audit.json`, `results/inference_audit.json` and `results/REPORT.md`.
+
+Fine-tuning improved AAPL log loss from 1.5906 to 1.5348 but did not beat the frequency baseline (1.5268) or numeric logistic baseline (1.4980). The paired interval includes zero. All four forecast rules abstained under the frozen confidence gate, so zero backtest return means zero trades. The trained adapter is exported to `artifacts/d3-edge-market-head/`. The service exited normally and restored desktop indexing.
+
+The sections below preserve historical progress and recovery notes; their pending-work statements describe earlier stages.
 
 ## Recovery on 27 October
 
@@ -12,7 +18,7 @@ All five damaged inputs were regenerated successfully and independently validate
 
 The user subsequently authorized maximum compute. Runtime profiling selected two independent CPU workers with two threads each for frozen extraction (4.91 seconds/input in the longer comparison). Adding GPU extraction was slower; head training still uses Vulkan. `runtime_config.json` and `docs/PERFORMANCE.md` record the measured configuration and FP32 parity. The service now starts `scripts/parallel_features.py` for the full d3 extraction phase. It increases the job's CPU scheduling weight and temporarily suspends/resumes Baloo indexing. Do not confuse CPU feature preparation with CPU optimizer training; the optimizer is unchanged and remains Vulkan.
 
-The requested experiment is **not complete**. Do not mark the goal complete from the existence of code, manifests, parity tests, or a running worker. Actual base results, selected-model fine-tuning on >=10,000 stock examples, and newer-period evaluation still need to finish and be audited.
+At this earlier milestone, actual selected-model fine-tuning and newer-period evaluation were still pending. The completion evidence is now recorded at the top of this document.
 
 ## Authoritative current work
 

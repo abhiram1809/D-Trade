@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_id": "AAPL:2026-10-22",
+  "target_date": "2026-10-23",
+  "context_points": 100,
+  "tokens": 791,
+  "maximum_probability_difference": 3.8743019104003906e-07,
+  "input": "inference_input.json",
+  "output": "inference_verified_prediction.json"
+}

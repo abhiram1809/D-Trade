@@ -1,0 +1,24 @@
+{
+  "horizon": "next session open-to-close; excludes overnight gap",
+  "five_bin_probabilities": {
+    "large_down": 0.07110326737165451,
+    "down": 0.242524191737175,
+    "flat": 0.33198222517967224,
+    "up": 0.27958962321281433,
+    "large_up": 0.07480072975158691
+  },
+  "direction_probabilities": {
+    "down": 0.3136274516582489,
+    "flat": 0.33198222517967224,
+    "up": 0.35439035296440125
+  },
+  "choice": "up",
+  "action": "abstain",
+  "tokens": 791,
+  "context_points": 100,
+  "model": "d3-edge",
+  "base_revision": "c454ee39b862248d70abd7f84195d2f54ffe6d43",
+  "news_coverage": "{\"status\": \"source_window_no_completeness_guarantee\", \"retrieved_matches\": 78, \"selected\": 3, \"source_coverage\": {\"records\": 15357, \"first\": \"2020-03-10T00:00:00+00:00\", \"last\": \"2026-10-25T23:59:59+00:00\", \"source_intervals_unix\": [[1583798400.0, 1702850400.0], [1742687999.0, 1792972799.0]]}}",
+  "interpretation": "Research forecast; finite ranges are in trailing daily-return sigma, not current-price target ranges.",
+  "conditional_nonflat_up_probability": 0.530510340461044
+}

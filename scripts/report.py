@@ -18,12 +18,22 @@ def main():
     for r in primary.itertuples():lines.append(f'| {r.model} | {r.n} | {r.five_bin_accuracy:.3f} | {r.three_class_accuracy:.3f} | {r.log_loss:.4f} | {r.brier:.4f} |')
     baseline=float(primary[primary.model=='class_frequency'].log_loss.iloc[0]);tuned=float(primary[primary.model=='fine_tuned'].log_loss.iloc[0])
     lines+=['',('The fine-tuned model improved' if tuned<baseline else 'The fine-tuned model did not improve')+f' AAPL log loss versus the training-frequency baseline ({tuned:.4f} versus {baseline:.4f}). This is the primary predictive comparison.']
+    lines+=['','## Cross-market test diagnostics','','| Group | Observations | Base log loss | Fine-tuned log loss | Frequency log loss | Numeric log loss |','|---|---:|---:|---:|---:|---:|']
+    for group in ('all','US','India','Global','FX'):
+        panel=metrics[metrics.group==group].set_index('model')
+        if len(panel):
+            lines.append(f"| {group} | {int(panel.loc['base','n'])} | {panel.loc['base','log_loss']:.4f} | {panel.loc['fine_tuned','log_loss']:.4f} | {panel.loc['class_frequency','log_loss']:.4f} | {panel.loc['numeric_logistic','log_loss']:.4f} |")
+    lines+=['','Each non-AAPL instrument contributes 24 predetermined test origins. These sparse panels are forecast diagnostics; only the complete AAPL series supports the continuous intraday replay.']
+    coverage=summary['primary_stock_news_counts']
+    lines+=['',f"AAPL inputs with retrieved headlines: {coverage['training_with_headlines']:,}/{c['training_examples']:,} training, {coverage['validation_with_headlines']:,} validation, and {coverage['test_with_headlines']:,}/{summary['primary_stock_test_examples']:,} test. This coverage shift and the absence of a controlled news ablation limit conclusions about news filtering."]
     boot=summary['bootstrap_fine_tuned_vs_frequency_AAPL'];lines+=['',f"Paired block-bootstrap loss difference (fine-tuned minus baseline): {boot['mean_log_loss_difference_a_minus_b']:.4f}, 95% interval [{boot['ci95'][0]:.4f}, {boot['ci95'][1]:.4f}]. Negative favors fine-tuning.",'','## Illustrative continuous AAPL intraday backtest','', '| Model | Net return | Worst drawdown | Active fraction | Doubled-cost return |','|---|---:|---:|---:|---:|']
     if boot['ci95'][0]<=0<=boot['ci95'][1]:
         lines.insert(lines.index('## Illustrative continuous AAPL intraday backtest')-1,'The interval includes zero: this test does not provide clear evidence of a predictive advantage over class frequencies.')
     trading=json.loads((ROOT/'results/trading.json').read_text())
     for model,r in trading.items():
         a=r['AAPL_standard_cost'];s=r['AAPL_double_cost'];lines.append(f"| {model} | {a['total_return']:.2%} | {a['worst_drawdown']:.2%} | {a['active_fraction']:.2%} | {s['total_return']:.2%} |")
+    if all(r['AAPL_standard_cost']['active_fraction']==0 for r in trading.values()):
+        lines+=['','All four forecast rules abstained on every AAPL session under the predeclared 0.55 directional-confidence gate. The zero returns represent **zero trades**, not evidence of profitable execution. The threshold was not changed after seeing test results.']
     if 'feature_runtime' in c:
         lines+=['','Frozen features used the benchmark-selected FP32 CPU/Vulkan runtime in `runtime_config.json`; parity checks against the original cached encoder outputs are recorded in the runtime benchmark files. Weight updates use the native Vulkan scorer.']
     lines+=['','## Interpretation and limits','']+[f'- {x}.' for x in summary['limitations']]+['- Reported backtests are open-to-close synthetic exposures with explicit costs, not broker executions.','- Missing archive news does not mean no market-moving event occurred.','- The noise filter is heuristic salience metadata, not a human-verified relevance dataset.','- A correct typed answer format is not evidence of financial accuracy.','','Full per-market/per-symbol results: `forecast_metrics.csv`. Per-origin probabilities and labels: `test_predictions.parquet`. Parameter updates and exact scope: the saved `adapter_config.json`. Vulkan forward/backward/update checks: `vulkan_parity.json`.','','## Validation candidate comparison','','| Candidate | Parameters | Validation log loss |','|---|---:|---:|']
@@ -33,7 +43,7 @@ def main():
     lines+=['','## Measured test figures','']
     for figure in figures:
         label=Path(figure).stem.replace('_',' ')
-        lines+=[f'![{label}]({figure})','']
+        lines+=[f'![{label}](figures/{Path(figure).name})','']
     (ROOT/'results/REPORT.md').write_text('\n'.join(lines)+'\n')
     print(ROOT/'results/REPORT.md')
 

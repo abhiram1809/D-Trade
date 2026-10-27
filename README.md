@@ -4,6 +4,8 @@ A reproducible experiment comparing open decision models below **800 million par
 
 **Run status is in `results/run_status.json`.** A running worker is not a finished experiment. `results/summary.json` and `results/REPORT.md` are created only after the measured fine-tuning and test stages finish.
 
+The experiment has completed. Read [the measured report](results/REPORT.md): d3-edge head fine-tuning improved AAPL test log loss from 1.5906 to 1.5348, while the class-frequency baseline scored 1.5268 and numeric logistic baseline 1.4980. The test does not establish a market edge. All four forecast rules made zero trades under the frozen confidence gate. The trained head is included under `artifacts/d3-edge-market-head/`; large data and pretrained models remain local and reproducible through the scripts.
+
 Read [the model research](docs/DECISION_MODELS.md), [the predeclared experiment protocol](docs/PROTOCOL.md), and [the dataset specification](docs/DATASET.md).
 
 ## Data and prediction task
@@ -49,7 +51,7 @@ bash scripts/build_vulkan.sh
 After completion, the worker writes validation comparisons, exact adapter weights/config, per-origin test probabilities, per-market/per-symbol metrics, cost-sensitive AAPL backtests, a paired block bootstrap and a readable report. To apply an adapter to a documented JSON example:
 
 ```bash
-.venv/bin/python scripts/predict.py --input example.json --adapter models/laya-market-head
+.venv/bin/python scripts/predict.py --input results/inference_input.json --adapter artifacts/d3-edge-market-head
 ```
 
 Use the selected model's actual adapter directory. A bare input has `{"input":{"state":"...\nr_bp=...100 integer returns..."}}`; exported dataset records already contain this structure. Predictions reject a sequence with fewer or more than 100 observations.

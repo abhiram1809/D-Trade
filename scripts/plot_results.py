@@ -65,6 +65,8 @@ def render():
     ax.axhline(10_000,color='#aaaaaa',linewidth=.7)
     ax.set(title='AAPL intraday research replay after costs',ylabel='Wealth from 10,000 normalized currency units',xlabel='Held-out session date')
     ax.legend(loc='best',fontsize=8,frameon=False)
+    if all(np.all(curves[name].to_numpy()==10_000) for name in MODELS):
+        ax.text(.02,.03,'All four forecast rules abstained (0 trades); their curves overlap at 10,000.',transform=ax.transAxes,fontsize=9,color='#555555',bbox={'facecolor':'white','alpha':.8,'edgecolor':'none'})
     fig.text(.01,-.035,'Signals use prior-session observations. Costs: 5 bps per side. No overnight holdings or broker-fill assumptions.',fontsize=9,color='#555555')
     save(fig,'aapl_intraday_equity')
     curves.to_csv(ROOT/'results/aapl_equity_curves.csv',index=False)

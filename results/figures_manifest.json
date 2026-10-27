@@ -1,0 +1,14 @@
+{
+  "source": "completed test_predictions.parquet and forecast_metrics.csv",
+  "primary_stock_test_examples": 454,
+  "png_files": [
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/forecast_quality.png",
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/aapl_intraday_equity.png",
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/aapl_calibration.png"
+  ],
+  "svg_files": [
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/forecast_quality.svg",
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/aapl_intraday_equity.svg",
+    "/home/abhiram/Documents/ChatGPT/D-Trade/results/figures/aapl_calibration.svg"
+  ]
+}

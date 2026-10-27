@@ -1,0 +1,122 @@
+{
+  "base": {
+    "AAPL_standard_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": 0.007011821616815794,
+        "worst_drawdown": -0.2653595334973956,
+        "annualized_sharpe": 0.14066090043571647,
+        "observed_sessions": 454
+      }
+    },
+    "AAPL_double_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": -0.3606414748692476,
+        "worst_drawdown": -0.44945664071108715,
+        "annualized_sharpe": -0.845193429159637,
+        "observed_sessions": 454
+      }
+    }
+  },
+  "fine_tuned": {
+    "AAPL_standard_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": 0.007011821616815794,
+        "worst_drawdown": -0.2653595334973956,
+        "annualized_sharpe": 0.14066090043571647,
+        "observed_sessions": 454
+      }
+    },
+    "AAPL_double_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": -0.3606414748692476,
+        "worst_drawdown": -0.44945664071108715,
+        "annualized_sharpe": -0.845193429159637,
+        "observed_sessions": 454
+      }
+    }
+  },
+  "class_frequency": {
+    "AAPL_standard_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": 0.007011821616815794,
+        "worst_drawdown": -0.2653595334973956,
+        "annualized_sharpe": 0.14066090043571647,
+        "observed_sessions": 454
+      }
+    },
+    "AAPL_double_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": -0.3606414748692476,
+        "worst_drawdown": -0.44945664071108715,
+        "annualized_sharpe": -0.845193429159637,
+        "observed_sessions": 454
+      }
+    }
+  },
+  "numeric_logistic": {
+    "AAPL_standard_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": 0.007011821616815794,
+        "worst_drawdown": -0.2653595334973956,
+        "annualized_sharpe": 0.14066090043571647,
+        "observed_sessions": 454
+      }
+    },
+    "AAPL_double_cost": {
+      "total_return": 0.0,
+      "worst_drawdown": 0.0,
+      "annualized_sharpe": null,
+      "observed_sessions": 454,
+      "active_fraction": 0.0,
+      "two_sided_turnover": 0.0,
+      "passive_intraday": {
+        "total_return": -0.3606414748692476,
+        "worst_drawdown": -0.44945664071108715,
+        "annualized_sharpe": -0.845193429159637,
+        "observed_sessions": 454
+      }
+    }
+  }
+}
