@@ -6,6 +6,8 @@ A reproducible experiment comparing open decision models below **800 million par
 
 The experiment has completed. Read [the measured report](results/REPORT.md): d3-edge head fine-tuning improved AAPL test log loss from 1.5906 to 1.5348, while the class-frequency baseline scored 1.5268 and numeric logistic baseline 1.4980. The test does not establish a market edge. All four forecast rules made zero trades under the frozen confidence gate. The trained head is included under `artifacts/d3-edge-market-head/`; large data and pretrained models remain local and reproducible through the scripts.
 
+The [user-requested highest-probability allocation replay](results/BACKTEST_HIGHEST_CONFIDENCE.md) removes the gate: the largest aggregated down/flat/up probability determines a full short/cash/long allocation. The fine-tuned rule takes 316 trades over 454 AAPL sessions, with +2.92% gross return, −24.98% after the same costs and −38.43% worst drawdown. This is an exploratory execution revision using unchanged forecasts. Reproduce it with `.venv/bin/python scripts/backtest_highest_confidence.py`; it writes per-session allocations, statistics and an equity chart while preserving the original gate results.
+
 Read [the model research](docs/DECISION_MODELS.md), [the predeclared experiment protocol](docs/PROTOCOL.md), and [the dataset specification](docs/DATASET.md).
 
 ## Data and prediction task

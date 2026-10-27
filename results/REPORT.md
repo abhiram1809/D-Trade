@@ -32,7 +32,7 @@ AAPL inputs with retrieved headlines: 454/10,752 training, 0 validation, and 387
 Paired block-bootstrap loss difference (fine-tuned minus baseline): 0.0080, 95% interval [-0.0141, 0.0310]. Negative favors fine-tuning.
 The interval includes zero: this test does not provide clear evidence of a predictive advantage over class frequencies.
 
-## Illustrative continuous AAPL intraday backtest
+## Original 55% gate comparison
 
 | Model | Net return | Worst drawdown | Active fraction | Doubled-cost return |
 |---|---:|---:|---:|---:|
@@ -42,6 +42,21 @@ The interval includes zero: this test does not provide clear evidence of a predi
 | numeric_logistic | 0.00% | 0.00% | 0.00% | 0.00% |
 
 All four forecast rules abstained on every AAPL session under the predeclared 0.55 directional-confidence gate. The zero returns represent **zero trades**, not evidence of profitable execution. The threshold was not changed after seeing test results.
+
+## Highest-probability allocation replay
+
+The user requested this additional execution rule after the original test: full allocation to the most probable aggregated direction, with no confidence gate. Up means long, down means short, flat or ties mean cash. Forecast probabilities and costs are unchanged. This is an exploratory replay, not another unseen-data validation.
+
+| Model | Long | Short | Cash | Net return | Worst drawdown | Doubled-cost return |
+|---|---:|---:|---:|---:|---:|---:|
+| base | 2 | 279 | 173 | -37.11% | -40.50% | -52.55% |
+| fine_tuned | 312 | 4 | 138 | -24.98% | -38.43% | -45.33% |
+| class_frequency | 0 | 454 | 0 | -64.45% | -66.61% | -77.45% |
+| numeric_logistic | 257 | 148 | 49 | -38.30% | -47.17% | -58.88% |
+
+[Full allocation replay and per-session data](BACKTEST_HIGHEST_CONFIDENCE.md). The original 55% gate comparison above is retained.
+
+![Highest-probability allocation](figures/aapl_highest_confidence_equity.png)
 
 Frozen features used the benchmark-selected FP32 CPU/Vulkan runtime in `runtime_config.json`; parity checks against the original cached encoder outputs are recorded in the runtime benchmark files. Weight updates use the native Vulkan scorer.
 

@@ -172,6 +172,8 @@ def train_and_evaluate(model):
     summary['primary_stock_news_counts']={'training_with_headlines':int((table.loc[train_ids,'news_json']!='[]').sum()),'validation_with_headlines':int((table.loc[valid_ids,'news_json']!='[]').sum()),'test_with_headlines':int((aapl&retrieved).sum()),'test_without_headlines':int((aapl&~retrieved).sum())}
     summary['limitations']+=['Headlines-versus-no-headlines diagnostic groups cover different dates; they do not estimate a causal news benefit','The intraday target excludes overnight news gaps','The long AAPL training history spans very different market regimes']
     (ROOT/'results/summary.json').write_text(json.dumps(summary,indent=2))
+    from backtest_highest_confidence import run as replay_highest_probability
+    replay_highest_probability()
     print(json.dumps(summary,indent=2))
 
 

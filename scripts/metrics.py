@@ -29,11 +29,29 @@ def score(y, p):
     return {'n': len(y), 'five_bin_accuracy': accuracy_score(y, pred), 'five_bin_macro_f1': f1_score(y,pred,labels=np.arange(5),average='macro',zero_division=0), 'three_class_accuracy': accuracy_score(y3,p3.argmax(1)), 'three_class_macro_f1': f1_score(y3,p3.argmax(1),labels=np.arange(3),average='macro',zero_division=0), 'log_loss': log_loss(y,p,labels=np.arange(5)), 'brier': float(np.mean(np.sum((p-np.eye(5)[y])**2,axis=1))), 'ece':float(ece), 'actual_central_interval_coverage':float(central.mean()), 'predicted_central_interval_mass':float(p[:,1:4].sum(1).mean()), **binary}
 
 
-def strategy(frame, p, cost_multiplier=1.):
+def directional_positions(p, confidence_gate=.55):
+    """Full allocation to the leading direction; None removes the confidence gate.
+
+    In the ungated rule, flat and ties stay in cash. Down/up aggregate their two
+    range bins, so allocation uses directional probabilities rather than one bin.
+    """
+    p=np.asarray(p)
+    if p.ndim!=2 or p.shape[1]!=5 or not np.isfinite(p).all() or np.any(p<0):
+        raise ValueError('Expected finite nonnegative five-bin probabilities')
+    if not np.allclose(p.sum(1),1,atol=1e-6,rtol=0):
+        raise ValueError('Forecast probability rows must sum to one')
+    p3=np.c_[p[:,:2].sum(1),p[:,2],p[:,3:].sum(1)]
+    choice=p3.argmax(1)
+    if confidence_gate is None:
+        unique=np.isclose(p3,p3.max(1,keepdims=True),atol=1e-12,rtol=0).sum(1)==1
+        return np.where(unique&(choice==2),1.,np.where(unique&(choice==0),-1.,0.))
+    if not 0<=confidence_gate<=1:raise ValueError('Confidence gate must be in [0,1] or None')
+    return np.where((choice==2)&(p3[:,2]>=confidence_gate),1.,np.where((choice==0)&(p3[:,0]>=confidence_gate),-1.,0.))
+
+
+def strategy(frame, p, cost_multiplier=1., *, confidence_gate=.55):
     """Intraday exposure only; two sides paid each active session, no overnight holding."""
-    p3 = np.c_[p[:,:2].sum(1),p[:,2],p[:,3:].sum(1)]
-    choice = p3.argmax(1)
-    position = np.where((choice==2)&(p3[:,2]>=.55),1.,np.where((choice==0)&(p3[:,0]>=.55),-1.,0.))
+    position = directional_positions(p,confidence_gate)
     costs = frame.market.map({'India':.001,'US':.0005,'Global':.0005,'FX':.0001}).to_numpy()*cost_multiplier
     r = np.expm1(frame.target_log_return.to_numpy())
     net = position * r - 2 * costs * abs(position)

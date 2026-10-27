@@ -6,6 +6,8 @@ Fine-tuning improved AAPL log loss from 1.5906 to 1.5348 but did not beat the fr
 
 The sections below preserve historical progress and recovery notes; their pending-work statements describe earlier stages.
 
+The user subsequently requested a replay without the directional confidence gate. `results/BACKTEST_HIGHEST_CONFIDENCE.md` records full allocation to the largest down/flat/up probability, with cash for flat or ties. The fine-tuned model takes 312 long and 4 short positions, stays cash on 138 sessions, and returns −24.98% after 5 bps per side (gross +2.92%; drawdown −38.43%). The original gated outputs and all forecasts are retained. All 19 tests pass; `results/highest_confidence_audit.json` independently checks all 1,816 model/session allocation rows.
+
 ## Recovery on 27 October
 
 The machine booted at 01:36 IST on 26 October, within a minute of the previous worker's final progress entry. It stopped at 6,167 / 10,752 AAPL training representations and 6,815 / 12,646 total representations. The log had no recorded exception. A resumed runner on 27 October passed all 11 integrity tests, reused validation caches, selected the same d3-edge candidate, and continued from the saved inputs. Its initial throughput after restart is slower than the earlier run; use fresh progress rather than the previous ETA.
