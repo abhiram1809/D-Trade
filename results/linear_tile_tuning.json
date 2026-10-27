@@ -1,0 +1,610 @@
+[
+  {
+    "config": [
+      64,
+      64,
+      4,
+      16,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_4_16_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.21661288099994636,
+      0.07218783200005419,
+      0.3630565419998675
+    ],
+    "weighted_main_projection_seconds": 8.243302379998568,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      32,
+      32,
+      4,
+      16,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/32_32_4_16_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2051926609997281,
+      0.07246557200005554,
+      0.3744393729998592
+    ],
+    "weighted_main_projection_seconds": 8.040846965993296,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      32,
+      64,
+      4,
+      16,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/32_64_4_16_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2116222090003248,
+      0.07248852400016403,
+      0.3731708170003003
+    ],
+    "weighted_main_projection_seconds": 8.187820206011565,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      32,
+      4,
+      16,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_32_4_16_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.20217866900020454,
+      0.07226896800011673,
+      0.3643145529999856
+    ],
+    "weighted_main_projection_seconds": 7.905402990006223,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      8,
+      16,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_8_16_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.20205619199987268,
+      0.07060127900012958,
+      0.3702619130003768
+    ],
+    "weighted_main_projection_seconds": 7.91813543400076,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      4,
+      32,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_4_32_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2043250030001218,
+      0.07042521599987595,
+      0.3678073240002959
+    ],
+    "weighted_main_projection_seconds": 7.95574660800321,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      4,
+      8,
+      0
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_4_8_0.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.19926641199981532,
+      0.07204082299995207,
+      0.3713983859997825
+    ],
+    "weighted_main_projection_seconds": 7.875274079993687,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      4,
+      16,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_4_16_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2036276609997003,
+      0.07185468099987702,
+      0.36850927399973443
+    ],
+    "weighted_main_projection_seconds": 7.960375679989738,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      4,
+      32,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_4_32_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2031155609997768,
+      0.07379192200005491,
+      0.37061822999976357
+    ],
+    "weighted_main_projection_seconds": 7.983985907993883,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      8,
+      16,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_8_16_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2013234249998277,
+      0.0703745920000074,
+      0.36870517900024424
+    ],
+    "weighted_main_projection_seconds": 7.888488377997419,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      64,
+      8,
+      32,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_64_8_32_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.20572290500012969,
+      0.07556626599989613,
+      0.3748501180002677
+    ],
+    "weighted_main_projection_seconds": 8.093245620003472,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      32,
+      64,
+      4,
+      32,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/32_64_4_32_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.20039104899979066,
+      0.07232066899996425,
+      0.3700165449999986
+    ],
+    "weighted_main_projection_seconds": 7.897332473994538,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      32,
+      32,
+      4,
+      32,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/32_32_4_32_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.20374409099986224,
+      0.0770270990001336,
+      0.37900783600025534
+    ],
+    "weighted_main_projection_seconds": 8.088230387999829,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      64,
+      128,
+      8,
+      16,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/64_128_8_16_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.2033615049999753,
+      0.07024606400000266,
+      0.36603591899984167
+    ],
+    "weighted_main_projection_seconds": 7.919844401998489,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      128,
+      64,
+      8,
+      16,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/128_64_8_16_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.1974547810000331,
+      0.07060965499977101,
+      0.3630916309998611
+    ],
+    "weighted_main_projection_seconds": 7.764780389997213,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  },
+  {
+    "config": [
+      16,
+      64,
+      4,
+      16,
+      1
+    ],
+    "shader": "/home/abhiram/Documents/ChatGPT/D-Trade/results/cache/gemm_tuning/16_64_4_16_1.comp",
+    "shapes": [
+      [
+        619,
+        3584,
+        1024
+      ],
+      [
+        619,
+        1024,
+        3584
+      ],
+      [
+        619,
+        6144,
+        1024
+      ]
+    ],
+    "median_seconds": [
+      0.21990414800029612,
+      0.07841379100000267,
+      0.37910674399972777
+    ],
+    "weighted_main_projection_seconds": 8.493305508005506,
+    "max_absolute_errors": [
+      3.725290298461914e-07,
+      1.4007091522216797e-06,
+      3.725290298461914e-07
+    ]
+  }
+]

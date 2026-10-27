@@ -8,6 +8,10 @@ Type=simple
 WorkingDirectory=%h/Documents/ChatGPT/D-Trade
 ExecStart=%h/Documents/ChatGPT/D-Trade/.venv/bin/python scripts/run_pipeline.py
 Environment=PYTHONUNBUFFERED=1
+Environment=OMP_WAIT_POLICY=PASSIVE
+CPUWeight=1000
+ExecStartPre=-/usr/bin/timeout 5 /usr/bin/balooctl6 suspend
+ExecStopPost=-/usr/bin/timeout 5 /usr/bin/balooctl6 resume
 Restart=on-failure
 RestartSec=30
 TimeoutStopSec=30

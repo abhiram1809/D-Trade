@@ -1,0 +1,49 @@
+[
+  {
+    "device": "cpu",
+    "threads": 4,
+    "batch": 2,
+    "seconds": 11.004255350000221,
+    "seconds_per_example": 5.502127675000111,
+    "tokens": [
+      626,
+      598
+    ],
+    "max_feature_difference": 2.002716064453125e-05,
+    "max_probability_difference": 1.9073486328125e-06
+  },
+  {
+    "device": "cpu",
+    "threads": 4,
+    "batch": 4,
+    "seconds": 21.89766280199956,
+    "seconds_per_example": 5.47441570049989,
+    "tokens": [
+      626,
+      598,
+      629,
+      613
+    ],
+    "max_feature_difference": 1.621246337890625e-05,
+    "max_probability_difference": 1.7583370208740234e-06
+  },
+  {
+    "device": "cpu",
+    "threads": 4,
+    "batch": 8,
+    "seconds": 44.12699365099979,
+    "seconds_per_example": 5.515874206374974,
+    "tokens": [
+      626,
+      598,
+      629,
+      613,
+      619,
+      617,
+      639,
+      612
+    ],
+    "max_feature_difference": 2.002716064453125e-05,
+    "max_probability_difference": 1.1026859283447266e-06
+  }
+]

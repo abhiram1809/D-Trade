@@ -24,6 +24,8 @@ def main():
     trading=json.loads((ROOT/'results/trading.json').read_text())
     for model,r in trading.items():
         a=r['AAPL_standard_cost'];s=r['AAPL_double_cost'];lines.append(f"| {model} | {a['total_return']:.2%} | {a['worst_drawdown']:.2%} | {a['active_fraction']:.2%} | {s['total_return']:.2%} |")
+    if 'feature_runtime' in c:
+        lines+=['','Frozen features used the benchmark-selected FP32 CPU/Vulkan runtime in `runtime_config.json`; parity checks against the original cached encoder outputs are recorded in the runtime benchmark files. Weight updates use the native Vulkan scorer.']
     lines+=['','## Interpretation and limits','']+[f'- {x}.' for x in summary['limitations']]+['- Reported backtests are open-to-close synthetic exposures with explicit costs, not broker executions.','- Missing archive news does not mean no market-moving event occurred.','- The noise filter is heuristic salience metadata, not a human-verified relevance dataset.','- A correct typed answer format is not evidence of financial accuracy.','','Full per-market/per-symbol results: `forecast_metrics.csv`. Per-origin probabilities and labels: `test_predictions.parquet`. Parameter updates and exact scope: the saved `adapter_config.json`. Vulkan forward/backward/update checks: `vulkan_parity.json`.','','## Validation candidate comparison','','| Candidate | Parameters | Validation log loss |','|---|---:|---:|']
     for r in selection['comparisons']:lines.append(f"| {r['model']} | {r['parameters']:,} | {r['log_loss']:.4f} |")
     from plot_results import render

@@ -1,0 +1,21 @@
+{
+  "feature_workers": {
+    "cpu0": {
+      "device": "cpu",
+      "threads": 2
+    },
+    "cpu1": {
+      "device": "cpu",
+      "threads": 2
+    }
+  },
+  "training_cpu_threads": 4,
+  "training_backend": "native Vulkan scorer on AMD Radeon RX 560",
+  "feature_precision": "FP32; existing Vulkan features retained; CPU features validated against original cached vectors",
+  "benchmark_source": "results/parallel_runtime_extended.json",
+  "measured_seconds_per_example": 4.91047400320834,
+  "max_probability_difference": 2.0265579223632812e-06,
+  "probability_parity_tolerance": 0.0001,
+  "input_policy": "unchanged 100-point contexts, question, news, chronological splits and model revision",
+  "selected_unix": 1793092759.9060729
+}

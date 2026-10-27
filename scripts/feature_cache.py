@@ -38,12 +38,14 @@ def recover(folder, indices, example_ids, shape):
     return {'checked':checked,'quarantined':quarantined,'checked_unix':time.time()}
 
 
-def write_durable(target, *, x, tokens, example_id):
+def write_durable(target, *, x, tokens, example_id, backend=None):
     target=Path(target)
     temporary=target.with_name('.'+target.name+'.tmp')
     try:
         with temporary.open('wb') as output:
-            np.savez_compressed(output,x=x,tokens=tokens,example_id=example_id)
+            payload={'x':x,'tokens':tokens,'example_id':example_id}
+            if backend is not None:payload['backend']=backend
+            np.savez_compressed(output,**payload)
             output.flush()
             os.fsync(output.fileno())
         os.replace(temporary,target)

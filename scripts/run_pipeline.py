@@ -20,6 +20,10 @@ def run(phase,args):
     status(phase)
     print(phase,'started',time.strftime('%Y-%m-%d %H:%M:%S'),flush=True)
     env=dict(os.environ,OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false')
+    runtime=ROOT/'runtime_config.json'
+    if phase=='vulkan_fine_tuning_and_test' and runtime.exists():
+        threads=str(json.loads(runtime.read_text()).get('training_cpu_threads',4))
+        env.update(OMP_NUM_THREADS=threads,OPENBLAS_NUM_THREADS=threads,MKL_NUM_THREADS=threads)
     with (ROOT/'results'/f'{phase}.log').open('a') as log:
         process=subprocess.Popen(args,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
         status(phase,worker_pid=process.pid)
@@ -56,7 +60,10 @@ def main():
     run('candidate_selection',[PY,'scripts/train_evaluate.py','--select'])
     selected=json.loads((ROOT/'results/model_selection.json').read_text())['winner']
     feature_script='scripts/model_features.py' if selected=='laya' else 'scripts/d3_features.py'
-    run('selected_model_full_features',[PY,feature_script,'--phase','all','--batch-size','1'])
+    if selected=='d3-edge' and (ROOT/'runtime_config.json').exists():
+        run('selected_model_full_features',[PY,'scripts/parallel_features.py'])
+    else:
+        run('selected_model_full_features',[PY,feature_script,'--phase','all','--batch-size','1'])
     run('vulkan_fine_tuning_and_test',[PY,'scripts/train_evaluate.py','--model',selected])
     run('final_report',[PY,'scripts/report.py'])
     status('complete','complete',selected_model=selected,report=str(ROOT/'results/REPORT.md'))

@@ -10,6 +10,8 @@ A full cache check after the reboot found five empty d3 files at indices 6162–
 
 All five damaged inputs were regenerated successfully and independently validated; `results/reboot_cache_repair_verified.json` records this. All 15 integrity/storage tests passed. The service is actively extracting more inputs. Initial throughput after recovery is about 15 seconds/input, roughly twice as slow as the prior run, giving about 24 hours remaining at this milestone. Treat this as a changing throughput estimate, not a completion promise.
 
+The user subsequently authorized maximum compute. Runtime profiling selected two independent CPU workers with two threads each for frozen extraction (4.91 seconds/input in the longer comparison). Adding GPU extraction was slower; head training still uses Vulkan. `runtime_config.json` and `docs/PERFORMANCE.md` record the measured configuration and FP32 parity. The service now starts `scripts/parallel_features.py` for the full d3 extraction phase. It increases the job's CPU scheduling weight and temporarily suspends/resumes Baloo indexing. Do not confuse CPU feature preparation with CPU optimizer training; the optimizer is unchanged and remains Vulkan.
+
 The requested experiment is **not complete**. Do not mark the goal complete from the existence of code, manifests, parity tests, or a running worker. Actual base results, selected-model fine-tuning on >=10,000 stock examples, and newer-period evaluation still need to finish and be audited.
 
 ## Authoritative current work

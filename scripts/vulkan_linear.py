@@ -9,8 +9,8 @@ HERE = Path(__file__).resolve().parent
 
 
 class VulkanEngine:
-    def __init__(self):
-        self.lib = C.CDLL(str(HERE.parent / "native/liblinear.so"))
+    def __init__(self, shader_path=None, tile_m=64, tile_n=64, library_path=None):
+        self.lib = C.CDLL(str(library_path or HERE.parent / "native/liblinear.so"))
         ptr = C.POINTER(C.c_float)
         self.ptr = ptr
         self.lib.vl_create.argtypes = [C.c_char_p]
@@ -20,7 +20,13 @@ class VulkanEngine:
         self.lib.vl_run.argtypes = [C.c_void_p, C.c_int, ptr, ptr, C.c_uint]
         self.lib.vl_run.restype = C.c_int
         self.lib.vl_destroy.argtypes = [C.c_void_p]
-        self.handle = self.lib.vl_create(str(HERE.parent / "native/linear.spv").encode())
+        shader=str(shader_path or HERE.parent / "native/linear.spv").encode()
+        if tile_m==64 and tile_n==64:
+            self.handle = self.lib.vl_create(shader)
+        else:
+            self.lib.vl_create_tiled.argtypes=[C.c_char_p,C.c_uint,C.c_uint]
+            self.lib.vl_create_tiled.restype=C.c_void_p
+            self.handle=self.lib.vl_create_tiled(shader,tile_m,tile_n)
         if not self.handle:
             raise RuntimeError("Vulkan engine initialization failed")
 
@@ -61,8 +67,8 @@ class VulkanLinear(torch.nn.Module):
         return self.engine.run(self.index, x, self.out_features)
 
 
-def offload(model):
-    engine = VulkanEngine()
+def offload(model, **engine_options):
+    engine = VulkanEngine(**engine_options)
     converted = 0
     for name, module in list(model.named_modules()):
         if isinstance(module, torch.nn.Linear) and name != 'scorer.3' and not name.endswith('out_proj'):

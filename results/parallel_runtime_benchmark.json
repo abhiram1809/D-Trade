@@ -1,0 +1,86 @@
+[
+  {
+    "workers": {
+      "cpu0": {
+        "device": "cpu",
+        "threads": 4
+      }
+    },
+    "examples": 8,
+    "seconds": 46.08703779300049,
+    "seconds_per_example": 5.760879724125061,
+    "max_feature_difference": 2.002716064453125e-05,
+    "max_probability_difference": 2.0265579223632812e-06,
+    "work_distribution": {
+      "cpu0": 8
+    }
+  },
+  {
+    "workers": {
+      "cpu0": {
+        "device": "cpu",
+        "threads": 2
+      },
+      "cpu1": {
+        "device": "cpu",
+        "threads": 2
+      }
+    },
+    "examples": 8,
+    "seconds": 36.28175130599993,
+    "seconds_per_example": 4.535218913249992,
+    "max_feature_difference": 2.002716064453125e-05,
+    "max_probability_difference": 2.0265579223632812e-06,
+    "work_distribution": {
+      "cpu0": 4,
+      "cpu1": 4
+    }
+  },
+  {
+    "workers": {
+      "cpu0": {
+        "device": "cpu",
+        "threads": 3
+      },
+      "gpu": {
+        "device": "vulkan",
+        "threads": 1
+      }
+    },
+    "examples": 8,
+    "seconds": 45.04737313499936,
+    "seconds_per_example": 5.63092164187492,
+    "max_feature_difference": 1.621246337890625e-05,
+    "max_probability_difference": 1.9371509552001953e-06,
+    "work_distribution": {
+      "cpu0": 5,
+      "gpu": 3
+    }
+  },
+  {
+    "workers": {
+      "cpu0": {
+        "device": "cpu",
+        "threads": 2
+      },
+      "cpu1": {
+        "device": "cpu",
+        "threads": 2
+      },
+      "gpu": {
+        "device": "vulkan",
+        "threads": 1
+      }
+    },
+    "examples": 8,
+    "seconds": 35.792095473999325,
+    "seconds_per_example": 4.474011934249916,
+    "max_feature_difference": 2.002716064453125e-05,
+    "max_probability_difference": 2.0265579223632812e-06,
+    "work_distribution": {
+      "cpu0": 3,
+      "cpu1": 3,
+      "gpu": 2
+    }
+  }
+]

@@ -32,6 +32,7 @@ struct Engine {
     std::vector<Layer> layers;
     const VkDeviceSize capacity=64ull*1024*1024;
     std::string name;
+    uint32_t tileM=64,tileN=64;
     Buffer alloc(VkDeviceSize size,VkBufferUsageFlags usage,VkMemoryPropertyFlags flags) {
         Buffer out;
         VkBufferCreateInfo bi{VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO};
@@ -73,7 +74,8 @@ struct Engine {
         VkMemoryBarrier mb{VK_STRUCTURE_TYPE_MEMORY_BARRIER};mb.srcAccessMask=from;mb.dstAccessMask=to;
         vkCmdPipelineBarrier(cmd,src,dst,0,1,&mb,0,nullptr,0,nullptr);
     }
-    Engine(const char* shaderPath) {
+    Engine(const char* shaderPath,uint32_t tm=64,uint32_t tn=64):tileM(tm),tileN(tn) {
+        if(!tileM || !tileN)throw std::runtime_error("Invalid output tile size");
         VkApplicationInfo app{VK_STRUCTURE_TYPE_APPLICATION_INFO};
         app.pApplicationName="Timestral FP32 linear validation";app.apiVersion=VK_API_VERSION_1_1;
         VkInstanceCreateInfo ii{VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO};ii.pApplicationInfo=&app;
@@ -171,7 +173,7 @@ struct Engine {
         vkCmdBindPipeline(cmd,VK_PIPELINE_BIND_POINT_COMPUTE,pipeline);
         vkCmdBindDescriptorSets(cmd,VK_PIPELINE_BIND_POINT_COMPUTE,pipelineLayout,0,1,&l.ds,0,nullptr);
         uint32_t dims[3]={m,l.n,l.k};vkCmdPushConstants(cmd,pipelineLayout,VK_SHADER_STAGE_COMPUTE_BIT,0,12,dims);
-        vkCmdDispatch(cmd,(l.n+63)/64,(m+63)/64,1);
+        vkCmdDispatch(cmd,(l.n+tileN-1)/tileN,(m+tileM-1)/tileM,1);
         barrier(VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT,VK_PIPELINE_STAGE_TRANSFER_BIT,
                 VK_ACCESS_SHADER_WRITE_BIT,VK_ACCESS_TRANSFER_READ_BIT);
         VkBufferCopy outcopy{0,0,outbytes};vkCmdCopyBuffer(cmd,output.b,stageOut.b,1,&outcopy);
@@ -193,6 +195,9 @@ struct Engine {
 extern "C" {
 void* vl_create(const char* path) {
     try{return new Engine(path);}catch(const std::exception& e){fprintf(stderr,"%s\n",e.what());return nullptr;}
+}
+void* vl_create_tiled(const char* path,uint32_t tm,uint32_t tn) {
+    try{return new Engine(path,tm,tn);}catch(const std::exception& e){fprintf(stderr,"%s\n",e.what());return nullptr;}
 }
 int vl_add(void* p,const float* w,const float* bias,uint32_t n,uint32_t k) {
     try{return ((Engine*)p)->add(w,bias,n,k);}catch(const std::exception& e){fprintf(stderr,"%s\n",e.what());return -1;}

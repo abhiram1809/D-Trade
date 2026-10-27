@@ -1,0 +1,45 @@
+{
+  "new_cpu_cache_entries_checked": 12,
+  "indices": [
+    6224,
+    6223,
+    6222,
+    6221,
+    6220,
+    6219,
+    6218,
+    6217,
+    6216,
+    6215,
+    6214,
+    6213
+  ],
+  "passed": true,
+  "checked_unix": 1793092958.2867906,
+  "checks": [
+    "loads successfully",
+    "finite 1024-vector",
+    "source example identity",
+    "positive token count",
+    "CPU FP32 backend recorded"
+  ],
+  "live_progress": {
+    "model": "d3-edge",
+    "phase": "all",
+    "completed_this_run": 24,
+    "total_this_phase": 5797,
+    "examples_per_second": 0.22859987812235288,
+    "estimated_remaining_hours": 7.014925485886807,
+    "workers": {
+      "cpu0": {
+        "device": "cpu",
+        "threads": 2
+      },
+      "cpu1": {
+        "device": "cpu",
+        "threads": 2
+      }
+    },
+    "updated_unix": 1793092949.834941
+  }
+}
