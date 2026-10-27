@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from transformers.initialization import no_init_weights
+from feature_cache import recover, write_durable
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'models/laya'))
@@ -91,10 +92,14 @@ def cache_features(batch_size=2, phase='all'):
     indices = sorted(set(train_indices + eval_indices + aapl_later))
     digest = hashlib.sha256((ROOT/'data/processed/examples.parquet').read_bytes()).hexdigest()
     manifest_path = folder/'manifest.json'
+    revision=json.loads((ROOT/'vendor/laya/metadata.json').read_text())['sha']
     if manifest_path.exists():
         old = json.loads(manifest_path.read_text())
-        if old['dataset_sha256'] != digest or old['question'] != QUESTION:
+        if old['dataset_sha256'] != digest or old['question'] != QUESTION or old['model_revision']!=revision:
             raise ValueError('Cache provenance changed; use a new cache directory')
+    recovery=recover(folder,indices,table['id'],(5,1024))
+    (ROOT/'results/laya_cache_recovery.json').write_text(json.dumps(recovery,indent=2))
+    print('Cache recovery: '+json.dumps(recovery),flush=True)
     model = LayaFeatures(vulkan=True)
     manifest = {'dataset_sha256': digest, 'question': QUESTION, 'model_revision': json.loads((ROOT/'vendor/laya/metadata.json').read_text())['sha'], 'indices': indices, 'n_parameters': model.n_parameters, 'trainable_parameters': len(model.initial_weight), 'temperature': model.temperature, 'feature_dtype': 'float32', 'fine_tune_scope': 'original scorer.3.weight only; all other parameters frozen', 'runtime_max_len':8192, 'runtime_head_max_len':512}
     manifest_path.write_text(json.dumps(manifest, indent=2))
@@ -111,10 +116,7 @@ def cache_features(batch_size=2, phase='all'):
         features, tokens = model.extract(table.loc[chosen,'state'].tolist())
         for idx, x, count in zip(chosen, features, tokens):
             target = folder/f'{idx:08d}.npz'
-            # Atomic completed-file marker makes recovery duplicate safe.
-            tmp = target.with_suffix('.tmp.npz')
-            np.savez_compressed(tmp, x=x, tokens=count, example_id=table.loc[idx,'id'])
-            tmp.replace(target)
+            write_durable(target,x=x,tokens=count,example_id=table.loc[idx,'id'])
         completed += len(chosen)
         elapsed = time.time() - started
         status = {'model': 'laya', 'phase': phase, 'completed_this_run': completed, 'cached': len(list(folder.glob('[0-9]*.npz'))), 'total':len(indices), 'phase_remaining':len(remaining)-completed, 'last_indices':chosen, 'last_tokens':tokens, 'batch_seconds':time.time()-begin, 'examples_per_second':completed/elapsed, 'estimated_remaining_hours':(len(remaining)-completed)/(completed/elapsed)/3600, 'updated_unix':time.time()}

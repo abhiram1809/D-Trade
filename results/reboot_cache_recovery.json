@@ -1,0 +1,31 @@
+{
+  "checked": 6827,
+  "quarantined": [
+    {
+      "index": 6162,
+      "error": "No data left in file",
+      "preserved_at": "results/cache/d3-edge/quarantine/00006162.1793090487266523537.npz"
+    },
+    {
+      "index": 6163,
+      "error": "No data left in file",
+      "preserved_at": "results/cache/d3-edge/quarantine/00006163.1793090487267364863.npz"
+    },
+    {
+      "index": 6164,
+      "error": "No data left in file",
+      "preserved_at": "results/cache/d3-edge/quarantine/00006164.1793090487268360097.npz"
+    },
+    {
+      "index": 6165,
+      "error": "No data left in file",
+      "preserved_at": "results/cache/d3-edge/quarantine/00006165.1793090487269169292.npz"
+    },
+    {
+      "index": 6166,
+      "error": "No data left in file",
+      "preserved_at": "results/cache/d3-edge/quarantine/00006166.1793090487269875245.npz"
+    }
+  ],
+  "checked_unix": 1793090489.0360813
+}

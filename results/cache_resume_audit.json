@@ -1,0 +1,30 @@
+{
+  "model": "d3-edge",
+  "cache_files_checked": 6825,
+  "dataset_sha256": "1033c942a1b3ebc240315b15cc988cf7c5c55a6a4759081fe5d591f2d765386a",
+  "model_revision": "c454ee39b862248d70abd7f84195d2f54ffe6d43",
+  "issues": [
+    {
+      "file": "00006162.npz",
+      "error": "No data left in file"
+    },
+    {
+      "file": "00006163.npz",
+      "error": "No data left in file"
+    },
+    {
+      "file": "00006164.npz",
+      "error": "No data left in file"
+    },
+    {
+      "file": "00006165.npz",
+      "error": "No data left in file"
+    },
+    {
+      "file": "00006166.npz",
+      "error": "No data left in file"
+    }
+  ],
+  "passed": false,
+  "checked_unix": 1793090359.4629252
+}

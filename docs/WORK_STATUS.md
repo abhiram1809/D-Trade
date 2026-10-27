@@ -6,6 +6,8 @@ The machine booted at 01:36 IST on 26 October, within a minute of the previous w
 
 `ops/d-trade.service` provides a user service for this checkout. Its installed service resumes after login and restarts failed processes, with a limit of three starts per hour. Use `systemctl --user status d-trade.service` and live `results/run_status.json` PIDs to check it. An unchanged completed dataset is not trained again on a later login. The actual Vulkan fine-tuning and newer-period test are still pending at this milestone.
 
+A full cache check after the reboot found five empty d3 files at indices 6162–6166. The remaining 6,820 checked representations passed shape, finiteness, token count and dataset-identity checks. Preserve the empty files under `results/cache/d3-edge/quarantine/` and regenerate those inputs. `scripts/feature_cache.py` now checks existing cache entries on startup, quarantines invalid ones, and uses file/directory fsync around atomic writes. `results/cache_resume_audit.json` preserves the initial failure evidence; subsequent recovery reports record quarantine and regeneration. This changes storage reliability, not model inputs or forecasting settings.
+
 The requested experiment is **not complete**. Do not mark the goal complete from the existence of code, manifests, parity tests, or a running worker. Actual base results, selected-model fine-tuning on >=10,000 stock examples, and newer-period evaluation still need to finish and be audited.
 
 ## Authoritative current work

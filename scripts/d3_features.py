@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'models/d3-edge'))
 from d3_runtime import D3
 from model_features import QUESTION
+from feature_cache import recover, write_durable
 
 
 class CaptureEncoder:
@@ -78,8 +79,14 @@ def cache_features(batch_size=2, phase='validation'):
         order=[i for i in indices if table.loc[i,'split']=='validation']+[i for i in indices if table.loc[i,'split']=='train']+[i for i in indices if table.loc[i,'split']=='test']
     digest=hashlib.sha256((ROOT/'data/processed/examples.parquet').read_bytes()).hexdigest()
     mp=folder/'manifest.json'
-    if mp.exists() and json.loads(mp.read_text())['dataset_sha256']!=digest:
-        raise ValueError('Dataset changed')
+    revision=json.loads((ROOT/'vendor/d3-edge/metadata.json').read_text())['sha']
+    if mp.exists():
+        old=json.loads(mp.read_text())
+        if old['dataset_sha256']!=digest or old['question']!=QUESTION or old['model_revision']!=revision:
+            raise ValueError('Cache provenance changed; use a new cache directory')
+    recovery=recover(folder,indices,table['id'],(1024,))
+    (ROOT/'results/d3-edge_cache_recovery.json').write_text(json.dumps(recovery,indent=2))
+    print('Cache recovery: '+json.dumps(recovery),flush=True)
     model=D3Features(vulkan=True)
     manifest={'dataset_sha256':digest,'question':QUESTION,'model_revision':json.loads((ROOT/'vendor/d3-edge/metadata.json').read_text())['sha'],'indices':indices,'n_parameters':model.n_parameters,'trainable_parameters':len(model.initial_weight),'temperature':model.temperature,'feature_dtype':'float32','feature_representation':'class_block','fine_tune_scope':'first five original answer-code readout rows only; frozen backbone','precision_note':'BF16 checkpoint promoted to FP32 for CPU/Vulkan arithmetic'}
     mp.write_text(json.dumps(manifest,indent=2))
@@ -91,8 +98,8 @@ def cache_features(batch_size=2, phase='validation'):
         begin=time.time()
         features,tokens=model.extract(table.loc[chosen,'state'].tolist())
         for idx,x,count in zip(chosen,features,tokens):
-            target=folder/f'{idx:08d}.npz';tmp=target.with_suffix('.tmp.npz')
-            np.savez_compressed(tmp,x=x,tokens=count,example_id=table.loc[idx,'id']);tmp.replace(target)
+            target=folder/f'{idx:08d}.npz'
+            write_durable(target,x=x,tokens=count,example_id=table.loc[idx,'id'])
         completed=start+len(chosen);elapsed=time.time()-started
         status={'model':'d3-edge','phase':phase,'completed_this_run':completed,'total_this_phase':len(remaining),'batch_seconds':time.time()-begin,'examples_per_second':completed/elapsed,'estimated_remaining_hours':(len(remaining)-completed)/(completed/elapsed)/3600,'updated_unix':time.time()}
         (ROOT/'results/d3_feature_progress.json').write_text(json.dumps(status,indent=2));print(json.dumps(status),flush=True)

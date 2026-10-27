@@ -69,6 +69,10 @@ if __name__=='__main__':
     lock=(ROOT/'results/pipeline.lock').open('w')
     try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     except BlockingIOError:raise SystemExit('A pipeline worker already holds the GPU lock')
+    (ROOT/'results/runner_process.json').write_text(json.dumps({
+        'pid':os.getpid(),'started_unix':time.time(),'command':'scripts/run_pipeline.py',
+        'launch':'systemd user service' if os.environ.get('INVOCATION_ID') else 'manual runner',
+    },indent=2))
     try:main()
     except Exception as exc:
         status('failed','failed',error=repr(exc),traceback=traceback.format_exc())
